@@ -1,0 +1,109 @@
+cfg: !!python/object/new:yacs.config.CfgNode
+  dictitems:
+    continue_ckpt: model/model_objaverse.ckpt
+    continue_training: false
+    correspondence_demo: false
+    cut_manifold: false
+    dataset: !!python/object/new:yacs.config.CfgNode
+      dictitems:
+        all_files: []
+        data_path: ../datasets/artgs/oven_101908/start
+        train_batch_size: 1
+        train_num_workers: 8
+        type: Mix
+        val_batch_size: 1
+        val_num_workers: 32
+      state:
+        __deprecated_keys__: !!set {}
+        __immutable__: false
+        __new_allowed__: false
+        __renamed_keys__: {}
+    epoch_selected: epoch=50.ckpt
+    inference_metrics_only: false
+    inference_save_feat_pca: true
+    inference_save_pred_sdf_to_mesh: true
+    is_pc: true
+    load_original_mesh: false
+    loss: !!python/object/new:yacs.config.CfgNode
+      dictitems:
+        feat: 10.0
+        l1: 0.0
+        sdf: 1.0
+        triplet: 1.0
+      state:
+        __deprecated_keys__: !!set {}
+        __immutable__: false
+        __new_allowed__: false
+        __renamed_keys__: {}
+    lr: 0.001
+    n_point_per_face: 1000
+    n_sample_each: 10000
+    name: test
+    num_neg_hard_emb: 128
+    num_neg_hard_pc: 128
+    num_neg_random: 256
+    num_pos: 64
+    output_dir: results/test/251101-230243
+    preprocess_mesh: false
+    pvcnn: !!python/object/new:yacs.config.CfgNode
+      dictitems:
+        point_encoder_type: pvcnn
+        unet_cfg: !!python/object/new:yacs.config.CfgNode
+          dictitems:
+            depth: 3
+            enabled: true
+            rolled: true
+            start_hidden_channels: 32
+            use_3d_aware: true
+            use_initial_conv: false
+          state:
+            __deprecated_keys__: !!set {}
+            __immutable__: false
+            __new_allowed__: false
+            __renamed_keys__: {}
+        use_point_scatter: true
+        z_triplane_channels: 256
+        z_triplane_resolution: 128
+      state:
+        __deprecated_keys__: !!set {}
+        __immutable__: false
+        __new_allowed__: false
+        __renamed_keys__: {}
+    regress_2d_feat: false
+    remesh_demo: false
+    result_name: ../../datasets/artgs/oven_101908/start/partfield_features
+    save_every_epoch: 10
+    seed: 0
+    test: false
+    test_corres: false
+    test_partobjaversetiny: false
+    test_subset: false
+    train: true
+    training_epochs: 30
+    triplane_channels_high: 512
+    triplane_channels_low: 128
+    triplane_resolution: 128
+    triplet_sampling: random
+    use_2d_feat: false
+    use_pvcnn: false
+    use_pvcnnonly: true
+    vertex_feature: false
+    voxel2triplane: !!python/object/new:yacs.config.CfgNode
+      dictitems:
+        normalize_vox_feat: false
+        transformer_dim: 1024
+        transformer_heads: 8
+        transformer_layers: 6
+        triplane_dim: 64
+        triplane_high_res: 256
+        triplane_low_res: 32
+      state:
+        __deprecated_keys__: !!set {}
+        __immutable__: false
+        __new_allowed__: false
+        __renamed_keys__: {}
+  state:
+    __deprecated_keys__: !!set {}
+    __immutable__: false
+    __new_allowed__: false
+    __renamed_keys__: {}
