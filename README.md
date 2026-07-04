@@ -91,10 +91,10 @@ After training, you can view the visualized final point cloud, `metrics.json`, p
 
 We also provide a script to export the current scene as a video. 
 ```bash
-CUDA_VISIBLE_DEVICES=<gpu_id> python vis.py --num_movable 4 --model_path ./outputs_final/artpro/table34178 --data_path ./datasets/artpro/table34178 --view_idx 25
+CUDA_VISIBLE_DEVICES=<gpu_id> python vis.py --num_movable 4 --model_path ./outputs/artpro/table34178 --data_path ./datasets/artpro/table34178 --view_idx 25
 ```
 
-<video src="https://github.com/DyllanElliia/ArtPro/raw/main/video/v_outputs_final_artpro_table34178.mp4" controls width="40%">
+<video src="https://github.com/DyllanElliia/ArtPro/raw/main/assets/v_outputs_final_artpro_table34178.mp4" controls width="40%">
   Oops...
 </video>
 
