@@ -13,7 +13,7 @@
   <a href="https://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</a><sup>1</sup>
 </p>
 
-<p><sub>* indicates equal contribution &nbsp;&nbsp; &dagger; indicates corresponding author</sub></p>
+<p><sub>* equal contribution &nbsp;&nbsp; &dagger; corresponding author</sub></p>
 
 <p><sup>1</sup>Shandong University &nbsp;&nbsp; <sup>2</sup>Southwest University</p>
 
